@@ -8,9 +8,9 @@ export async function GET() {
 }   
 
 export async function POST(req) {
-   const psotdata = await req.json(); 
-   const data = await dbconnect("farhan").insertOne({psotdata});
-
-
-    return Response.json({ data })
-}   
+    const postdata = await req.json(); 
+    const data = await dbconnect("farhan").insertOne(postdata);
+  
+    return Response.json({ data });
+  }
+  
